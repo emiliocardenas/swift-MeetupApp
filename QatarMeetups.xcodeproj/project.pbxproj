@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99A2933F780000543D9 /* SignInViewController.swift */; };
+		FF1BA99D2933F7DC000543D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */; };
+		FF1BA99F2933FA69000543D9 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */; };
+		FF84ACC92931AB7300B4F303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACC82931AB7300B4F303 /* AppDelegate.swift */; };
+		FF84ACCB2931AB7400B4F303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACCA2931AB7400B4F303 /* SceneDelegate.swift */; };
+		FF84ACD02931AB7400B4F303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF84ACCE2931AB7400B4F303 /* Main.storyboard */; };
+		FF84ACD32931AB7400B4F303 /* QatarMeetups.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACD12931AB7400B4F303 /* QatarMeetups.xcdatamodeld */; };
+		FF84ACD52931AB7400B4F303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF84ACD42931AB7400B4F303 /* Assets.xcassets */; };
+		FF84ACD82931AB7400B4F303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF84ACD62931AB7400B4F303 /* LaunchScreen.storyboard */; };
+		FF84ACE02931AC7B00B4F303 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACDF2931AC7B00B4F303 /* FeedViewController.swift */; };
+		FF84ACE42931ACFD00B4F303 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACE22931ACFD00B4F303 /* DemoTableViewCell.swift */; };
+		FF84ACE52931ACFD00B4F303 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF84ACE32931ACFD00B4F303 /* DemoTableViewCell.xib */; };
+		FF84ACE92931DB9300B4F303 /* DynamicPostInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACE82931DB9300B4F303 /* DynamicPostInfoViewController.swift */; };
+		FFB2A6B329347C7E00AE59C3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2A6B229347C7E00AE59C3 /* MyProfileViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF1BA99A2933F780000543D9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		FF84ACC52931AB7300B4F303 /* QatarMeetups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QatarMeetups.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF84ACC82931AB7300B4F303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF84ACCA2931AB7400B4F303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FF84ACCF2931AB7400B4F303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF84ACD22931AB7400B4F303 /* QatarMeetups.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QatarMeetups.xcdatamodel; sourceTree = "<group>"; };
+		FF84ACD42931AB7400B4F303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF84ACD72931AB7400B4F303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF84ACD92931AB7400B4F303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF84ACDF2931AC7B00B4F303 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FF84ACE22931ACFD00B4F303 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
+		FF84ACE32931ACFD00B4F303 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
+		FF84ACE82931DB9300B4F303 /* DynamicPostInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicPostInfoViewController.swift; sourceTree = "<group>"; };
+		FFB2A6B229347C7E00AE59C3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF84ACC22931AB7300B4F303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF1BA9992933F750000543D9 /* SignIn&SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				FF1BA99A2933F780000543D9 /* SignInViewController.swift */,
+				FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */,
+				FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */,
+			);
+			path = "SignIn&SignUp";
+			sourceTree = "<group>";
+		};
+		FF84ACBC2931AB7300B4F303 = {
+			isa = PBXGroup;
+			children = (
+				FF84ACC72931AB7300B4F303 /* QatarMeetups */,
+				FF84ACC62931AB7300B4F303 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF84ACC62931AB7300B4F303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF84ACC52931AB7300B4F303 /* QatarMeetups.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF84ACC72931AB7300B4F303 /* QatarMeetups */ = {
+			isa = PBXGroup;
+			children = (
+				FF1BA9992933F750000543D9 /* SignIn&SignUp */,
+				FF84ACE72931DB7500B4F303 /* PostInfo */,
+				FF84ACE12931ACC200B4F303 /* TableViewCell */,
+				FF84ACC82931AB7300B4F303 /* AppDelegate.swift */,
+				FF84ACCA2931AB7400B4F303 /* SceneDelegate.swift */,
+				FF84ACDF2931AC7B00B4F303 /* FeedViewController.swift */,
+				FF84ACCE2931AB7400B4F303 /* Main.storyboard */,
+				FF84ACD42931AB7400B4F303 /* Assets.xcassets */,
+				FF84ACD62931AB7400B4F303 /* LaunchScreen.storyboard */,
+				FF84ACD92931AB7400B4F303 /* Info.plist */,
+				FF84ACD12931AB7400B4F303 /* QatarMeetups.xcdatamodeld */,
+				FFB2A6B229347C7E00AE59C3 /* MyProfileViewController.swift */,
+			);
+			path = QatarMeetups;
+			sourceTree = "<group>";
+		};
+		FF84ACE12931ACC200B4F303 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF84ACE22931ACFD00B4F303 /* DemoTableViewCell.swift */,
+				FF84ACE32931ACFD00B4F303 /* DemoTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		FF84ACE72931DB7500B4F303 /* PostInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FF84ACE82931DB9300B4F303 /* DynamicPostInfoViewController.swift */,
+			);
+			path = PostInfo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF84ACC42931AB7300B4F303 /* QatarMeetups */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF84ACDC2931AB7400B4F303 /* Build configuration list for PBXNativeTarget "QatarMeetups" */;
+			buildPhases = (
+				FF84ACC12931AB7300B4F303 /* Sources */,
+				FF84ACC22931AB7300B4F303 /* Frameworks */,
+				FF84ACC32931AB7300B4F303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QatarMeetups;
+			productName = QatarMeetups;
+			productReference = FF84ACC52931AB7300B4F303 /* QatarMeetups.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF84ACBD2931AB7300B4F303 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					FF84ACC42931AB7300B4F303 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = FF84ACC02931AB7300B4F303 /* Build configuration list for PBXProject "QatarMeetups" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF84ACBC2931AB7300B4F303;
+			productRefGroup = FF84ACC62931AB7300B4F303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF84ACC42931AB7300B4F303 /* QatarMeetups */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF84ACC32931AB7300B4F303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF84ACD82931AB7400B4F303 /* LaunchScreen.storyboard in Resources */,
+				FF84ACD52931AB7400B4F303 /* Assets.xcassets in Resources */,
+				FF84ACE52931ACFD00B4F303 /* DemoTableViewCell.xib in Resources */,
+				FF84ACD02931AB7400B4F303 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF84ACC12931AB7300B4F303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFB2A6B329347C7E00AE59C3 /* MyProfileViewController.swift in Sources */,
+				FF1BA99F2933FA69000543D9 /* EditAccountViewController.swift in Sources */,
+				FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */,
+				FF84ACD32931AB7400B4F303 /* QatarMeetups.xcdatamodeld in Sources */,
+				FF1BA99D2933F7DC000543D9 /* SignUpViewController.swift in Sources */,
+				FF84ACE02931AC7B00B4F303 /* FeedViewController.swift in Sources */,
+				FF84ACC92931AB7300B4F303 /* AppDelegate.swift in Sources */,
+				FF84ACE42931ACFD00B4F303 /* DemoTableViewCell.swift in Sources */,
+				FF84ACE92931DB9300B4F303 /* DynamicPostInfoViewController.swift in Sources */,
+				FF84ACCB2931AB7400B4F303 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FF84ACCE2931AB7400B4F303 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF84ACCF2931AB7400B4F303 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF84ACD62931AB7400B4F303 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF84ACD72931AB7400B4F303 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF84ACDA2931AB7400B4F303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF84ACDB2931AB7400B4F303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF84ACDD2931AB7400B4F303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QatarMeetups/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.www.QatarMeetups;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF84ACDE2931AB7400B4F303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QatarMeetups/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.www.QatarMeetups;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF84ACC02931AB7300B4F303 /* Build configuration list for PBXProject "QatarMeetups" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF84ACDA2931AB7400B4F303 /* Debug */,
+				FF84ACDB2931AB7400B4F303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF84ACDC2931AB7400B4F303 /* Build configuration list for PBXNativeTarget "QatarMeetups" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF84ACDD2931AB7400B4F303 /* Debug */,
+				FF84ACDE2931AB7400B4F303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF84ACD12931AB7400B4F303 /* QatarMeetups.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF84ACD22931AB7400B4F303 /* QatarMeetups.xcdatamodel */,
+			);
+			currentVersion = FF84ACD22931AB7400B4F303 /* QatarMeetups.xcdatamodel */;
+			path = QatarMeetups.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FF84ACBD2931AB7300B4F303 /* Project object */;
+}
