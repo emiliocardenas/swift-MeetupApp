@@ -16,6 +16,37 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        print(data)
+        print(postData)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+//        print("View did appear")
+//        do {
+//            let currentPostData = try context.fetch(Post.fetchRequest())
+////            for existingAccount in currentPostData {
+////                print(existingAccount)
+////            }
+//            print("postData", currentPostData)
+//
+//
+//        }
+//        catch {}
+//
+//
+        print("Current users")
+        do {
+            let currentData = try context.fetch(Account.fetchRequest())
+//            for existingAccount in currentData {
+//                print(existingAccount.username!)
+//            }
+            print(currentData.count)
+        }
+        catch {}
+
+        
+        
+    
     }
     
     var flag = 0
@@ -91,10 +122,27 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         newPost.date = dateFormatter.string(from: date)
         newPost.review = txtPostReview.text!
         newPost.rating = txtRating.text!
-        newPost.addToPeople(data[0])
         newPost.addToImageGroup(newImage1)
         newPost.addToImageGroup(newImage2)
         newPost.addToImageGroup(newImage3)
+        
+        if data[0].post == nil {
+            newPost.addToPeople(data[0])
+        }
+        else {
+//            let cloneAccount  = Account(context: context)
+            let cloneAccount = Account(context: context)
+            cloneAccount.username = data[0].username!
+            cloneAccount.teamsOfInterest = data[0].teamsOfInterest!
+            cloneAccount.nationality = data[0].nationality!
+            cloneAccount.phoneNumber = data[0].phoneNumber!
+            cloneAccount.instagramAccount = data[0].instagramAccount!
+            cloneAccount.profilePicture = data[0].profilePicture!
+            
+            newPost.addToPeople(cloneAccount)
+            
+        }
+
 
         
         
