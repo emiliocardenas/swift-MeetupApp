@@ -9,8 +9,26 @@
         <attribute name="profilePicture" optional="YES" attributeType="Binary"/>
         <attribute name="teamsOfInterest" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="people" inverseEntity="Post"/>
+    </entity>
+    <entity name="Images" representedClassName="Images" syncable="YES" codeGenerationType="class">
+        <attribute name="placeImage" optional="YES" attributeType="Binary"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="imageGroup" inverseEntity="Post"/>
+    </entity>
+    <entity name="Post" representedClassName="Post" syncable="YES" codeGenerationType="class">
+        <attribute name="cityName" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="placeName" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="String"/>
+        <attribute name="review" optional="YES" attributeType="String"/>
+        <relationship name="imageGroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Images" inverseName="post" inverseEntity="Images"/>
+        <relationship name="people" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account" inverseName="post" inverseEntity="Account"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="Images" positionX="-54" positionY="54" width="128" height="59"/>
+        <element name="Post" positionX="-63" positionY="45" width="128" height="164"/>
     </elements>
 </model>

@@ -88,7 +88,7 @@ class EditAccountViewController: UIViewController, UIImagePickerControllerDelega
                 
                 data = try context.fetch(request)
                 
-                print(data[0])
+//                print(data[0])
                 
             }
             catch {}

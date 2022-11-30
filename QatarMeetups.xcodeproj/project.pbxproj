@@ -10,6 +10,8 @@
 		FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99A2933F780000543D9 /* SignInViewController.swift */; };
 		FF1BA99D2933F7DC000543D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */; };
 		FF1BA99F2933FA69000543D9 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */; };
+		FF36688729370195008B759F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36688629370195008B759F /* PostCollectionViewCell.swift */; };
+		FF7B87202936A15800A94446 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B871F2936A15800A94446 /* NewPostViewController.swift */; };
 		FF84ACC92931AB7300B4F303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACC82931AB7300B4F303 /* AppDelegate.swift */; };
 		FF84ACCB2931AB7400B4F303 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACCA2931AB7400B4F303 /* SceneDelegate.swift */; };
 		FF84ACD02931AB7400B4F303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF84ACCE2931AB7400B4F303 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		FF1BA99A2933F780000543D9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		FF36688629370195008B759F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF7B871F2936A15800A94446 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		FF84ACC52931AB7300B4F303 /* QatarMeetups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QatarMeetups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF84ACC82931AB7300B4F303 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF84ACCA2931AB7400B4F303 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,14 @@
 			path = "SignIn&SignUp";
 			sourceTree = "<group>";
 		};
+		FF36688529370139008B759F /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FF36688629370195008B759F /* PostCollectionViewCell.swift */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
 		FF84ACBC2931AB7300B4F303 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 		FF84ACC72931AB7300B4F303 /* QatarMeetups */ = {
 			isa = PBXGroup;
 			children = (
+				FF36688529370139008B759F /* collectionView */,
 				FF1BA9992933F750000543D9 /* SignIn&SignUp */,
 				FF84ACE72931DB7500B4F303 /* PostInfo */,
 				FF84ACE12931ACC200B4F303 /* TableViewCell */,
@@ -110,6 +123,7 @@
 		FF84ACE72931DB7500B4F303 /* PostInfo */ = {
 			isa = PBXGroup;
 			children = (
+				FF7B871F2936A15800A94446 /* NewPostViewController.swift */,
 				FF84ACE82931DB9300B4F303 /* DynamicPostInfoViewController.swift */,
 			);
 			path = PostInfo;
@@ -187,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF7B87202936A15800A94446 /* NewPostViewController.swift in Sources */,
 				FFB2A6B329347C7E00AE59C3 /* MyProfileViewController.swift in Sources */,
 				FF1BA99F2933FA69000543D9 /* EditAccountViewController.swift in Sources */,
 				FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */,
@@ -194,6 +209,7 @@
 				FF1BA99D2933F7DC000543D9 /* SignUpViewController.swift in Sources */,
 				FF84ACE02931AC7B00B4F303 /* FeedViewController.swift in Sources */,
 				FF84ACC92931AB7300B4F303 /* AppDelegate.swift in Sources */,
+				FF36688729370195008B759F /* PostCollectionViewCell.swift in Sources */,
 				FF84ACE42931ACFD00B4F303 /* DemoTableViewCell.swift in Sources */,
 				FF84ACE92931DB9300B4F303 /* DynamicPostInfoViewController.swift in Sources */,
 				FF84ACCB2931AB7400B4F303 /* SceneDelegate.swift in Sources */,
