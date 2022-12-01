@@ -23,6 +23,7 @@
 		FF84ACE52931ACFD00B4F303 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF84ACE32931ACFD00B4F303 /* DemoTableViewCell.xib */; };
 		FF84ACE92931DB9300B4F303 /* DynamicPostInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACE82931DB9300B4F303 /* DynamicPostInfoViewController.swift */; };
 		FFB2A6B329347C7E00AE59C3 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB2A6B229347C7E00AE59C3 /* MyProfileViewController.swift */; };
+		FFD804D229385920004EF6D9 /* OtherAccounrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD804D129385920004EF6D9 /* OtherAccounrViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FF84ACE32931ACFD00B4F303 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
 		FF84ACE82931DB9300B4F303 /* DynamicPostInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicPostInfoViewController.swift; sourceTree = "<group>"; };
 		FFB2A6B229347C7E00AE59C3 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		FFD804D129385920004EF6D9 /* OtherAccounrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAccounrViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				FF84ACD92931AB7400B4F303 /* Info.plist */,
 				FF84ACD12931AB7400B4F303 /* QatarMeetups.xcdatamodeld */,
 				FFB2A6B229347C7E00AE59C3 /* MyProfileViewController.swift */,
+				FFD804D129385920004EF6D9 /* OtherAccounrViewController.swift */,
 			);
 			path = QatarMeetups;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */,
 				FF84ACD32931AB7400B4F303 /* QatarMeetups.xcdatamodeld in Sources */,
 				FF1BA99D2933F7DC000543D9 /* SignUpViewController.swift in Sources */,
+				FFD804D229385920004EF6D9 /* OtherAccounrViewController.swift in Sources */,
 				FF84ACE02931AC7B00B4F303 /* FeedViewController.swift in Sources */,
 				FF84ACC92931AB7300B4F303 /* AppDelegate.swift in Sources */,
 				FF36688729370195008B759F /* PostCollectionViewCell.swift in Sources */,
@@ -361,6 +365,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QatarMeetups/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QatarDiscover;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Share restaurant location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -388,6 +394,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QatarMeetups/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QatarDiscover;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Share restaurant location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

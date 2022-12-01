@@ -7,46 +7,27 @@
 
 import UIKit
 import CoreData
+import CoreLocation
+
 
 var postData = [Post] ()
 
-class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnClearAllData.isHidden = true
+        btnClearAllData.isEnabled = false
 
         // Do any additional setup after loading the view.
         
-        print(data)
-        print(postData)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-//        print("View did appear")
-//        do {
-//            let currentPostData = try context.fetch(Post.fetchRequest())
-////            for existingAccount in currentPostData {
-////                print(existingAccount)
-////            }
-//            print("postData", currentPostData)
-//
-//
-//        }
-//        catch {}
-//
-//
-        print("Current users")
-        do {
-            let currentData = try context.fetch(Account.fetchRequest())
-//            for existingAccount in currentData {
-//                print(existingAccount.username!)
-//            }
-            print(currentData.count)
-        }
-        catch {}
 
-        
-        
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        btnClearAllData.isHidden = true
+        btnClearAllData.isEnabled = false
     }
     
     var flag = 0
@@ -100,6 +81,9 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var txtCityName: UITextField!
     @IBOutlet weak var txtRating: UITextField!
     @IBOutlet weak var txtPostReview: UITextField!
+    
+    @IBOutlet weak var btnClearAllData: UIButton!
+    
     @IBAction func submitPost(_ sender: UIButton) {
         let date = Date()
         let dateFormatter = DateFormatter()
@@ -125,7 +109,14 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         newPost.addToImageGroup(newImage1)
         newPost.addToImageGroup(newImage2)
         newPost.addToImageGroup(newImage3)
-        
+        if locationManager.location?.coordinate != nil {
+            newPost.longitude = "\((locationManager.location?.coordinate.longitude)!)"
+            newPost.latitude = "\((locationManager.location?.coordinate.latitude)!)"
+        }
+        else {
+            print("emtpy coordinate")
+        }
+
         if data[0].post == nil {
             newPost.addToPeople(data[0])
         }
@@ -142,12 +133,9 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
             newPost.addToPeople(cloneAccount)
             
         }
-
-
-        
-        
         
         appDelegate.saveContext()
+        performSegue(withIdentifier: "newPostToFeed", sender: self)
     }
     
     
@@ -173,10 +161,26 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Configure Fetch Request
 
         do {
-            let postData = try context.fetch(Post.fetchRequest())
+            let postDatas = try context.fetch(Post.fetchRequest())
 
 
-            for item in postData {
+            for item in postDatas {
+                context.delete(item)
+            }
+
+            // Save Changes
+            appDelegate.saveContext()
+
+        } catch {
+            // Error Handling
+            // ...
+        }
+        
+        do {
+            let datas = try context.fetch(Account.fetchRequest())
+
+
+            for item in datas {
                 context.delete(item)
             }
 
@@ -189,17 +193,35 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
-    //            // Display data
-    //            var data = [Account] ()
-    //
-    //            do {
-    //                data = try context.fetch(Account.fetchRequest())
-    //                for existingAccount in data {
-    //                    print ("Account \(existingAccount.username!), \(existingAccount.email!), \(existingAccount.password!), \(existingAccount.teamsOfInterest!), \(existingAccount.nationality!), \(existingAccount.instagramAccount!), \(existingAccount.profilePicture!)")
-    //                }
-    //
-    //            }
-    //            catch {}
+
+    
+    let locationManager = CLLocationManager()
+    
+    @IBAction func btnHandleLocation(_ sender: UIButton) {
+        
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+            print("in btn:", locationInfoLongitude)
+            print((locationManager.location?.coordinate)!)
+
+        }
+    }
+    
+    var locationInfoLongitude : Double = 0
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            locationInfoLongitude = location.coordinate.longitude
+            print("Location Manager:", location.coordinate.longitude)
+            
+        }
+        locationManager.stopUpdatingLocation()
+
+    }
+    
     
     
     

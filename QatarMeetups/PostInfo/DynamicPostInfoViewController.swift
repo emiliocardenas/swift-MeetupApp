@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import MapKit
 
 class DynamicPostInfoViewController: UIViewController {
     
@@ -54,26 +55,83 @@ class DynamicPostInfoViewController: UIViewController {
         catch {}
         
         lblPlaceName.text = "\((incomingText?.placeName)!)"
-        lblPostedByName.text = desiredAccounts[0].username!
-        print(desiredAccounts)
-        print(desiredImages)
+        lblPostedByName.text = "\((desiredAccounts[0].username)!)"
+        imgOtherAccount.image = UIImage(data: desiredAccounts[0].profilePicture!)
+        lblRating.text = "\((incomingText?.rating)!)"
+        lblDescription.text = "\((incomingText?.review)!)"
+        lblCityName.text = "\((incomingText?.cityName)!)"
+        
+        imgOtherAccount.layer.cornerRadius = 20
+        imgOtherAccount.clipsToBounds = true
+        
+        
+        roundView.layer.cornerRadius = 10
+        roundView.clipsToBounds = true
+
+//        print(desiredAccounts)
+//        print(desiredImages)
         
         setupCollectionView()
     }
     
     var incomingText : Post?
     
-    
-    
-    
+    @IBOutlet weak var roundView: UIView!
     
 
     @IBOutlet weak var lblPlaceName: UILabel!
     
     
+    @IBOutlet weak var imgOtherAccount: UIImageView!
+    
     @IBOutlet weak var lblPostedByName: UILabel!
     
     
+    @IBOutlet weak var lblCityName: UILabel!
+    
+    
+    @IBOutlet weak var lblRating: UILabel!
+    
+    
+    @IBOutlet weak var lblDescription: UITextView!
+    
+    
+    
+    
+    @IBAction func btnOpenInMaps(_ sender: UIButton) {
+        
+        let latitudeStringToDouble : Double = Double("\((incomingText?.latitude)!)")!
+        let longitudeStringToDouble : Double = Double("\((incomingText?.longitude)!)")!
+
+        
+        print(latitudeStringToDouble)
+        
+        let latitude: CLLocationDegrees = latitudeStringToDouble
+        let longitude: CLLocationDegrees = longitudeStringToDouble
+        
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "\((incomingText?.placeName)!)"
+        mapItem.openInMaps(launchOptions: options)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? OtherAccounrViewController {
+            destination.otherAccount = desiredAccounts[0]
+        }
+    }
+    
+    
+    @IBAction func btnSeeProfile(_ sender: UIButton) {
+        performSegue(withIdentifier: "seeProfile", sender: self)
+    }
     
     
 }

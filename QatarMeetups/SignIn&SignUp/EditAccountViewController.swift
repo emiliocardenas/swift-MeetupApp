@@ -109,6 +109,8 @@ class EditAccountViewController: UIViewController, UIImagePickerControllerDelega
         
         imagePicker.sourceType = .photoLibrary
         
+        imagePicker.allowsEditing = true
+        
         self.present(imagePicker, animated: true, completion: nil)
         
     }

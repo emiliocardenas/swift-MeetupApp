@@ -23,10 +23,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.register(DemoTableViewCell.nib(), forCellReuseIdentifier: DemoTableViewCell.identifier)
 
-//         Do any additional setup after loading the view.
-
+        
+        //Refetch all post data
         do {
             postData = try context.fetch(Post.fetchRequest())
+            
+            for items in postData {
+                print("Longitude:", items.longitude, "Latitude:", items.latitude)
+            }
         }
         catch {}
     }
@@ -71,17 +75,23 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.lblGame.text = "City: \(postData[indexPath.row].cityName!)"
         cell.lblAssistingNumber.text = postData[indexPath.row].rating!
         cell.lblPlacePicture.image = UIImage(data: desiredTableCellImage[0].placeImage!)
-//        imgProfilePic.image = UIImage(data: data[0].profilePicture!)
-
         return cell
     }
     
-    
-
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "postInfo", sender: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Refetch all post data
+        do {
+            postData = try context.fetch(Post.fetchRequest())
+            
+//            for items in postData {
+//                print("Longitude:", items.longitude, "Latitude:", items.latitude)
+//            }
+        }
+        catch {}
     }
 
 
@@ -90,6 +100,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let destination = segue.destination as? DynamicPostInfoViewController {
             destination.incomingText = postData[(tableView.indexPathForSelectedRow?.row)!]
         }
+    }
+    
+    @IBAction func btnAddNewPost(_ sender: UIButton) {
+        performSegue(withIdentifier: "feedToNewPost", sender: self)
     }
     
 
