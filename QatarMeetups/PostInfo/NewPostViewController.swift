@@ -12,7 +12,7 @@ import CoreLocation
 
 var postData = [Post] ()
 
-class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
+class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,27 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
 
         // Do any additional setup after loading the view.
         
+        txtPlaceName.delegate = self
+        txtPlaceName.returnKeyType = .done
+        txtCityName.delegate = self
+        txtCityName.returnKeyType = .done
+        txtRating.delegate = self
+        txtRating.returnKeyType = .done
+        txtPostReview.delegate = self
+        txtPostReview.returnKeyType = .done
+        
+        
+        
 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        txtPlaceName.resignFirstResponder()
+        txtCityName.resignFirstResponder()
+        txtRating.resignFirstResponder()
+        txtPostReview.resignFirstResponder()
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -205,7 +225,7 @@ class NewPostViewController: UIViewController, UIImagePickerControllerDelegate, 
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
             print("in btn:", locationInfoLongitude)
-            print((locationManager.location?.coordinate)!)
+//            print((locationManager.location?.coordinate)!)
 
         }
     }

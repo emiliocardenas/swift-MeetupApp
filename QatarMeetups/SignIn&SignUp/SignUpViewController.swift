@@ -13,13 +13,35 @@ var signUpEmail : String = "no email"
 var signUpPassword : String  = "no password"
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         lblErrorMessage.isHidden = true
+        
+//        let textField = UITextField(frame: CGRect(x: 20.0, y:90.0, width: 280.0, height: 44.0))
+//
+        txtName.delegate = self
+        txtName.returnKeyType = .done
+        
+        txtEmail.delegate = self
+        txtEmail.returnKeyType = .done
+        
+        txtPassword.delegate = self
+        txtPassword.returnKeyType = .done
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        txtName.resignFirstResponder()
+        txtEmail.resignFirstResponder()
+        txtPassword.resignFirstResponder()
+        return true
     }
     
 

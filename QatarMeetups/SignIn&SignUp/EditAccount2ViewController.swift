@@ -1,27 +1,26 @@
 //
-//  EditAccountViewController.swift
+//  EditAccount2ViewController.swift
 //  QatarMeetups
 //
-//  Created by Emilio Cardenas on 11/27/22.
+//  Created by Emilio Cardenas on 12/5/22.
 //
 
 import UIKit
 import CoreData
 
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let context = appDelegate.persistentContainer.viewContext
-
-var data = [Account] ()
-
-class EditAccountViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
-
+class EditAccount2ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         profilePic.layer.cornerRadius = 68
         profilePic.clipsToBounds = true
-        lblName.text = signUpUsername
-
+        lblName.text = data[0].username!
+        txtTeams.text = data[0].teamsOfInterest!
+        txtNationality.text = data[0].nationality!
+        txtPhoneNumber.text = data[0].phoneNumber!
+        txtInstagram.text = data[0].instagramAccount!
+        profilePic.image = UIImage(data: data[0].profilePicture!)
         // Do any additional setup after loading the view.
         
         txtTeams.delegate = self
@@ -69,15 +68,16 @@ class EditAccountViewController: UIViewController, UIImagePickerControllerDelega
         if txtTeams.text! != "" && txtNationality.text! != "" && txtPhoneNumber.text != "" && txtInstagram.text! != "" {
             
             // Create an Account Object
-            let newAccount = Account(context: context)
-            newAccount.username = signUpUsername
-            newAccount.email = signUpEmail
-            newAccount.password = signUpPassword
-            newAccount.teamsOfInterest = txtTeams.text!
-            newAccount.nationality = txtNationality.text!
-            newAccount.phoneNumber = txtPhoneNumber.text!
-            newAccount.instagramAccount = txtInstagram.text!
-            newAccount.profilePicture = profilePic.image?.pngData()
+            
+             
+//            data[0].username = signUpUsername
+//            data[0].email = signUpEmail
+//            newAccount.password = signUpPassword
+            data[0].teamsOfInterest = txtTeams.text!
+            data[0].nationality = txtNationality.text!
+            data[0].phoneNumber = txtPhoneNumber.text!
+            data[0].instagramAccount = txtInstagram.text!
+            data[0].profilePicture = profilePic.image?.pngData()
             
             // Save the data
             appDelegate.saveContext()
@@ -115,7 +115,7 @@ class EditAccountViewController: UIViewController, UIImagePickerControllerDelega
             catch {}
             
         }
-        performSegue(withIdentifier: "editToProfile", sender: self)
+        performSegue(withIdentifier: "edit2ToNav", sender: self)
         
             
         
@@ -148,7 +148,7 @@ class EditAccountViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     
-    // Photo Album 
+    // Photo Album
     @IBAction func btnPhotoAlbum(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
         

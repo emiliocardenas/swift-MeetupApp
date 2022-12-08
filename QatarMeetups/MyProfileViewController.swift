@@ -35,4 +35,14 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var lblPhoneNumber: UILabel!
     
     @IBOutlet weak var lblInstaAccount: UILabel!
+    
+    
+    @IBAction func btnLogout(_ sender: UIButton) {
+        performSegue(withIdentifier: "logOutToLogin", sender: self)
+    }
+    
+    
+    @IBAction func btnToEdit(_ sender: UIButton) {
+        performSegue(withIdentifier: "profileToEdit", sender: self)
+    }
 }

@@ -10,6 +10,7 @@
 		FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99A2933F780000543D9 /* SignInViewController.swift */; };
 		FF1BA99D2933F7DC000543D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */; };
 		FF1BA99F2933FA69000543D9 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */; };
+		FF239E61293DDB3700A91215 /* EditAccount2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF239E60293DDB3700A91215 /* EditAccount2ViewController.swift */; };
 		FF36688729370195008B759F /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36688629370195008B759F /* PostCollectionViewCell.swift */; };
 		FF7B87202936A15800A94446 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B871F2936A15800A94446 /* NewPostViewController.swift */; };
 		FF84ACC92931AB7300B4F303 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF84ACC82931AB7300B4F303 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		FF1BA99A2933F780000543D9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
+		FF239E60293DDB3700A91215 /* EditAccount2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccount2ViewController.swift; sourceTree = "<group>"; };
 		FF36688629370195008B759F /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF7B871F2936A15800A94446 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		FF84ACC52931AB7300B4F303 /* QatarMeetups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QatarMeetups.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 				FF1BA99A2933F780000543D9 /* SignInViewController.swift */,
 				FF1BA99C2933F7DC000543D9 /* SignUpViewController.swift */,
 				FF1BA99E2933FA69000543D9 /* EditAccountViewController.swift */,
+				FF239E60293DDB3700A91215 /* EditAccount2ViewController.swift */,
 			);
 			path = "SignIn&SignUp";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				FF7B87202936A15800A94446 /* NewPostViewController.swift in Sources */,
 				FFB2A6B329347C7E00AE59C3 /* MyProfileViewController.swift in Sources */,
+				FF239E61293DDB3700A91215 /* EditAccount2ViewController.swift in Sources */,
 				FF1BA99F2933FA69000543D9 /* EditAccountViewController.swift in Sources */,
 				FF1BA99B2933F780000543D9 /* SignInViewController.swift in Sources */,
 				FF84ACD32931AB7400B4F303 /* QatarMeetups.xcdatamodeld in Sources */,
@@ -363,6 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BZ8WV94X7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QatarMeetups/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QatarDiscover;
@@ -392,6 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8BZ8WV94X7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QatarMeetups/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QatarDiscover;
